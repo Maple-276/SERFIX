@@ -1,0 +1,163 @@
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-right: 250px;
+}
+
+/* Cambiar el color de la parte superior a blanco */
+.navbar {
+  background-color: #ff0000 !important;
+  height: 150px;
+  z-index: 1000;
+  position: absolute; /* Fija la barra en la parte superior */
+  top: 0;
+  width: 100%;
+}
+
+.navbar-nav .nav-link {
+  color: #000000 !important; /* Color negro */
+  line-height: 20px; /* Alinear verticalmente los enlaces */
+}
+
+.navbar-nav .nav-item {
+  background-color: #808080; /* Fondo gris */
+  margin-right: 10px; /* Espacio entre los elementos */
+  border-radius: 5px; /* Bordes redondeados */
+  
+}
+
+.navbar-nav .nav-item2 {
+  background-color: #f7f30a; /* Fondo amarillo */
+  margin-right: 10px; /* Espacio entre los elementos */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important; /* Color blanco */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  width: 100px; /* Tamaño más grande */
+  height: 100px; /* Tamaño más grande */
+}
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    padding-right: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    margin-top: 150px; /* Igual a la altura de la barra */
+    position: relative;
+    flex: 1;
+  }
+  
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Letras blancas */
+}
+
+body.dark-mode .navbar {
+  background-color: #4b0082 !important; /* Fondo morado */
+}
+
+body.dark-mode .navbar-nav .nav-link {
+  color: #ffffff !important; /* Letras blancas */
+}
+
+body.dark-mode .navbar-nav .nav-item2 {
+  background-color: #ffffff !important; /* Fondo blanco */
+}
+
+/* Footer */
+.footer {
+  background-color: #ff0000;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Footer en modo oscuro */
+body.dark-mode .footer {
+  background-color: #4b0082 !important; /* Fondo morado */
+  color: #ffffff; /* Letras blancas */
+}
+
+.img-circle {
+  border-radius: 50%;
+  width: 50px; /* Tamaño más grande */
+  height: 50px; /* Tamaño más grande */
+}
+
+/* Ajustar el margen izquierdo del botón de modo oscuro */
+#toggle-dark-mode {
+  margin-left: 10px; /* Ajusta este valor según sea necesario */
+}
+
+.cuadro_intro_hover{
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+.cuadro_intro_hover:hover .caption{
+  opacity: 1;
+  transform: translateY(-150px);
+  -webkit-transform:translateY(-150px);
+  -moz-transform:translateY(-150px);
+  -ms-transform:translateY(-150px);
+  -o-transform:translateY(-150px);
+}
+.cuadro_intro_hover img{
+  z-index: 4;
+}
+.cuadro_intro_hover .caption{
+  position: absolute;
+  top:150px;
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -o-transition:all 0.3s ease-in-out;
+  -ms-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+  width: 100%;
+}
+.cuadro_intro_hover .blur{
+  background-color: rgba(0,0,0,0.7);
+  height: 300px;
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+}
+.cuadro_intro_hover .caption-text{
+  z-index: 10;
+  color: #fff;
+  position: absolute;
+  height: 300px;
+  text-align: center;
+  top:-20px;
+  width: 100%;
+}
