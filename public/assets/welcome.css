@@ -1,8 +1,9 @@
 html, body {
+    background-image: url('/storage/images/Fondo_servix.jpg');
+    background-size: cover;
     height: 100%;
     margin: 0;
 }
-
 .content-wrapper {
     display: flex;
     flex-direction: column;

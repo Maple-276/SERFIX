@@ -12,7 +12,7 @@
     -ms-transform:translateY(-150px);
     -o-transform:translateY(-150px);
 }
-.cuadro_intro_hover img{
+.cuadro_intro_hover .img-responsive{
     z-index: 4;
 }
 .cuadro_intro_hover .caption{

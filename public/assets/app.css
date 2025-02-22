@@ -15,7 +15,6 @@ body {
   padding-left: 250px;
 }
 
-
 #wrapper.toggled {
   padding-right: 250px;
 }
@@ -30,16 +29,36 @@ body {
   width: 100%;
 }
 
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto; /* Empuja los elementos a la derecha */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Espacio entre logo y elementos */
+}
+
 .navbar-nav .nav-link {
   color: #000000 !important; /* Color negro */
   line-height: 20px; /* Alinear verticalmente los enlaces */
+  padding: 10px 15px; /* Espacio entre texto y borde */
 }
 
 .navbar-nav .nav-item {
   background-color: #808080; /* Fondo gris */
   margin-right: 10px; /* Espacio entre los elementos */
   border-radius: 5px; /* Bordes redondeados */
-  
 }
 
 .navbar-nav .nav-item2 {
@@ -53,10 +72,17 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.navbar-brand img {
+.navbar-brand .img-circle {
   border-radius: 50%;
-  width: 100px; /* Tamaño más grande */
-  height: 100px; /* Tamaño más grande */
+  width: 130px; /* Tamaño más grande */
+  height: 130px; /* Tamaño más grande */
+}
+
+.navbar-brand h2 {
+  color: #000000; /* Color negro */
+  font-size: 6rem; /* Tamaño de letra más grande */
+  font-weight: bold; /* Letra más gruesa */
+  margin-left: -20px; /* Espacio entre logo y texto */
 }
 
 @media(min-width:768px) {
@@ -97,6 +123,10 @@ body.dark-mode .navbar-nav .nav-item2 {
   background-color: #ffffff !important; /* Fondo blanco */
 }
 
+body.dark-mode .navbar-brand h2 {
+  color: #ffffff !important; /* Color blanco en modo oscuro */
+}
+
 /* Footer */
 .footer {
   background-color: #ff0000;
@@ -122,5 +152,3 @@ body.dark-mode .footer {
 #toggle-dark-mode {
   margin-left: 10px; /* Ajusta este valor según sea necesario */
 }
-
-

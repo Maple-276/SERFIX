@@ -27,34 +27,40 @@
 <body>  
     <div id="app">  
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> 
-            <div class="collapse navbar-collapse" id="navbarsExample02">
-                <a class="navbar-brand ml-auto" href="{{ url('/') }}">
-                    <img src="{{ asset('storage/images/Logo_Servix.jpg') }}" class="img-circle" alt="Logo">
-                    <h2 class="d-inline align-middle text-white">Servix</h2>
-                </a>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"> 
-                        <a class="nav-link" href="#">Demo <span class="sr-only">(current)</span></a> 
-                    </li>
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="#">Contactanos</a> 
-                    </li>
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="#">Explorar Servicios</a> 
-                    </li>
-                    <li class="nav-item2"> 
-                        <a class="nav-link" href="#">Suscribirse</a> 
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-md-0"> </form>
-                <button id="toggle-dark-mode" class="btn btn-secondary ml-2">
-                    <i id="dark-mode-icon" class="fas fa-moon"></i>
-                </button>
+            <div class="container"> <!-- Agregar contenedor padre -->
+                <div class="d-flex align-items-center"> <!-- Contenedor para logo y texto -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('storage/images/Logo_Servix.jpg') }}" class="img-circle" alt="Logo">
+                        <h2 class="">Servix</h2>
+                    </a>
+                </div>
+                
+                <div class="d-flex align-items-center"> <!-- Contenedor para elementos derecha -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"> 
+                            <a class="nav-link" href="#">Demo <span class="sr-only">(current)</span></a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="#">Contactanos</a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="#">Explorar Servicios</a> 
+                        </li>
+                        <li class="nav-item2"> 
+                            <a class="nav-link" href="#">Suscribirse</a> 
+                        </li>
+                    </ul>
+                    <button id="toggle-dark-mode" class="btn btn-secondary ml-3">
+                        <i id="dark-mode-icon" class="fas fa-moon"></i>
+                    </button>
+                </div>
             </div>
         </nav>
+        
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
+                @yield('content') <!-- Agrega esta línea para incluir el contenido de la sección 'content' -->
             </div>
         </div> 
 
