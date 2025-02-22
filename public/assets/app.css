@@ -12,6 +12,11 @@ body {
 }
 
 #wrapper.toggled {
+  padding-left: 250px;
+}
+
+
+#wrapper.toggled {
   padding-right: 250px;
 }
 
