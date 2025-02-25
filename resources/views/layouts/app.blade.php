@@ -22,6 +22,7 @@
 
     <!-- Custom Styles -->  
     <link href="{{ asset('assets/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="http://fonts.googleapis.com/css?family=Arimo:400" rel="stylesheet">  
 </head>  
 <body>  
@@ -45,9 +46,14 @@
                         </li>
                         <li class="nav-item"> 
                             <a class="nav-link" href="#">Explorar Servicios</a> 
-                        </li>
+                        </li>                      
                         <li class="nav-item2"> 
                             <a class="nav-link" href="#">Suscribirse</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ asset('login') }}">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </a>
                         </li>
                     </ul>
                     <button id="toggle-dark-mode" class="btn btn-secondary ml-3">
